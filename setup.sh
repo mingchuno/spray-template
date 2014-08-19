@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# return to home
+cd ~
+
 # Install basic
 sudo apt-get install git vim
 
@@ -27,3 +30,9 @@ wget http://downloads.typesafe.com/akka/akka_2.11-2.3.5.zip
 sudo unzip akka_2.11-2.3.5.zip -d /usr/local/akka
 sudo echo 'AKKA_HOME=/usr/local/akka/akka-2.3.5' > /etc/profile.d/akka.sh
 sudo echo 'export AKKA_HOME' >> /etc/profile.d/akka.sh
+# beware of the last 2 lines, check the *.sh ok or not
+
+git clone https://github.com/mingchuno/spray-template.git
+git checkout on_spray-can_1.3
+
+# then follow the step to start the server!
